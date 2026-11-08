@@ -1,5 +1,5 @@
 import React from 'react';
-import { Compass, BookOpen, Home, Castle, Radio, Download } from 'lucide-react';
+import { Compass, BookOpen, Home, Castle, Radio } from 'lucide-react';
 import { sounds } from '../utils/soundEffects';
 import { LAYOUT_IMAGES } from '../utils/imageAssets';
 import { stereoAudio } from '../services/stereoAudioService';
@@ -85,17 +85,8 @@ export const NavigationHeader: React.FC<NavigationHeaderProps> = ({
           </button>
         </nav>
 
-        {/* Zone 3: Stereo & Mood-Switcher & Hostinger Export */}
+        {/* Zone 3: Stereo & Mood-Switcher */}
         <div className="flex items-center gap-2">
-          <a
-            href="/lara_tagebuch_hostinger_webspace.zip"
-            download="lara_tagebuch_hostinger_webspace.zip"
-            className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-[#1c120b] border border-[#a06835]/60 text-[#ffd992] hover:bg-[#321e12] hover:border-[#ffd992] text-xs font-cinzel transition cursor-pointer shadow-md"
-            title="Fertiges Hostinger-Paket (.ZIP) für den Ordner public_html herunterladen"
-          >
-            <Download className="w-3.5 h-3.5 text-[#d4af37]" />
-            <span className="hidden lg:inline">Hostinger ZIP</span>
-          </a>
 
           <button
             onClick={() => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, Download } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
 import { sounds } from '../utils/soundEffects';
 import heroImage from '../assets/images/startseite_hero_1790788872670.jpg';
 
@@ -45,7 +45,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       {/* Freier Mittelbereich: Rucksack, Tagebuch, Pistolen und Schreibtisch bleiben voll sichtbar */}
       <main className="relative z-10 flex-1 w-full pointer-events-none" />
 
-      {/* Unten: Aktionsleiste - TAGEBUCH ÖFFNEN & HOSTINGER ZIP DOWNLOAD */}
+      {/* Unten: Aktionsleiste - TAGEBUCH ÖFFNEN */}
       <footer className="relative z-10 w-full pb-8 sm:pb-12 flex flex-wrap justify-center items-center gap-3.5 px-4">
         <button
           onClick={handleOpenClick}
@@ -55,20 +55,7 @@ export const HomePage: React.FC<HomePageProps> = ({
           <span>TAGEBUCH ÖFFNEN</span>
         </button>
 
-        <a
-          href="/download-hostinger-zip"
-          download="lara_tagebuch_hostinger_webspace.zip"
-          onClick={() => {
-            try { sounds.playClick(); } catch (_) {}
-          }}
-          className="flex items-center gap-2 px-5 py-3 bg-[#2a170b]/90 hover:bg-[#3d2210] border border-[#d4af37]/80 hover:border-[#ffd992] rounded-full text-[#ffd992] font-cinzel text-xs sm:text-sm font-semibold tracking-wider transition-all duration-300 shadow-lg hover:shadow-[#d4af37]/30 active:scale-95 cursor-pointer backdrop-blur-md group"
-          title="Komplette Website als ZIP für Hostinger public_html herunterladen"
-        >
-          <Download className="w-4 h-4 text-[#ffd992] animate-bounce" />
-          <span>ZIP FÜR HOSTINGER HERUNTERLADEN</span>
-        </a>
       </footer>
     </div>
   );
 };
-
