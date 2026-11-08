@@ -1,0 +1,39 @@
+name: Apply hotspot visual fix
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/fix-hotspot-visuals.yml
+
+permissions:
+  contents: write
+
+jobs:
+  fix-hotspots:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Remove visible hotspot overlays
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          path = Path('src/components/CroftManor.tsx')
+          text = path.read_text()
+          original = text
+          text = re.sub(r'\\s*group-hover:bg-(?:amber|cyan)-400/\\d+', '', text)
+          text = re.sub(r'\\s*group-hover:border-2\\s+group-hover:border-(?:amber|cyan)-400/\\d+', '', text)
+          text = re.sub(r'\\s*group-hover:opacity-100\\s+group-focus:opacity-100', '', text)
+          path.write_text(text)
+          print('changed:', text != original)
+          PY
+      - name: Commit corrected file and remove temporary workflow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/components/CroftManor.tsx
+          git rm .github/workflows/fix-hotspot-visuals.yml
+          git commit -m "Remove visible hotspot overlays" || exit 0
+          git push
