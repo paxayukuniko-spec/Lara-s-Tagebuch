@@ -1,0 +1,6 @@
+{
+  "name": "Lara´s Tagebuch",
+  "description": "Lara Crofts Expeditions-Tagebuch mit Pergament-Ästhetik, Vorlesefunktion mit der Stimme Kore und lokaler Medienverwaltung für Bilder und Skizzen.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

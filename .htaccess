@@ -1,0 +1,43 @@
+# ================================================================
+# Hostinger & Apache / LiteSpeed Konfiguration für Node.js Web App
+# ================================================================
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # 1. API-Anfragen immer an den Node.js Backend-Server leiten (Standard-Port 3000 oder via Hostinger Proxy)
+  RewriteCond %{REQUEST_URI} ^/api/ [NC]
+  RewriteRule ^api/(.*)$ http://127.0.0.1:3000/api/$1 [P,L]
+
+  # 2. Physisch existierende Dateien (Bilder, Musik, CSS, JS, Favicon) direkt ausliefern
+  RewriteCond %{DOCUMENT_ROOT}/dist/$1 -f
+  RewriteRule ^(.*)$ dist/$1 [L]
+
+  RewriteCond %{DOCUMENT_ROOT}/public/$1 -f
+  RewriteRule ^(.*)$ public/$1 [L]
+
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # 3. Single Page Application (SPA) Fallback: Alle anderen Seitenaufrufe an dist/index.html leiten
+  RewriteRule ^ dist/index.html [L]
+</IfModule>
+
+# Caching & MIME-Types für Mediendateien (Bilder, Tomb Raider Musik, Schriften)
+<IfModule mod_mime.c>
+  AddType audio/mpeg .mp3
+  AddType image/webp .webp
+  AddType application/json .json
+  AddType font/woff2 .woff2
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType audio/mpeg "access plus 1 month"
+  ExpiresByType text/css "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
+</IfModule>
