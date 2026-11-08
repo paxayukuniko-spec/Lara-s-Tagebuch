@@ -5186,16 +5186,16 @@ export function CroftManor({
                   }
                 }}
                 style={{
-                  background: 'linear-gradient(180deg, #2b1a0e 0%, #170d06 100%)',
-                  border: '2px solid #d4af37',
-                  borderRadius: '8px',
+                  background: 'transparent',
+                  border: '0',
+                  borderRadius: '0',
                   cursor: 'pointer',
                   padding: '0',
                   overflow: 'hidden',
                   display: 'flex',
                   flexDirection: 'column',
                   textAlign: 'left',
-                  boxShadow: '0 6px 18px rgba(0,0,0,0.7), inset 0 1px 0 rgba(212,175,55,0.3)',
+                  boxShadow: 'none',
                   transition: 'all 0.2s ease',
                 }}
                 className="group hover:scale-105 active:scale-95 hover:border-amber-300 hover:shadow-[0_8px_24px_rgba(212,175,55,0.4)]"
@@ -5248,7 +5248,7 @@ export function CroftManor({
                     style={{
                       marginTop: '8px',
                       paddingTop: '6px',
-                      borderTop: '1px solid rgba(212,175,55,0.2)',
+                      borderTop: '0',
                       color: '#d4af37',
                       fontSize: '11.5px',
                       fontWeight: 'bold',
@@ -5270,16 +5270,16 @@ export function CroftManor({
                   setAktuellerRaum('arbeitszimmer');
                 }}
                 style={{
-                  background: 'linear-gradient(180deg, #2b1a0e 0%, #170d06 100%)',
-                  border: '2px solid #d4af37',
-                  borderRadius: '8px',
+                  background: 'transparent',
+                  border: '0',
+                  borderRadius: '0',
                   cursor: 'pointer',
                   padding: '0',
                   overflow: 'hidden',
                   display: 'flex',
                   flexDirection: 'column',
                   textAlign: 'left',
-                  boxShadow: '0 6px 18px rgba(0,0,0,0.7), inset 0 1px 0 rgba(212,175,55,0.3)',
+                  boxShadow: 'none',
                   transition: 'all 0.2s ease',
                 }}
                 className="group hover:scale-105 active:scale-95 hover:border-amber-300 hover:shadow-[0_8px_24px_rgba(212,175,55,0.4)]"
@@ -5332,7 +5332,7 @@ export function CroftManor({
                     style={{
                       marginTop: '8px',
                       paddingTop: '6px',
-                      borderTop: '1px solid rgba(212,175,55,0.2)',
+                      borderTop: '0',
                       color: '#d4af37',
                       fontSize: '11.5px',
                       fontWeight: 'bold',
@@ -5354,16 +5354,16 @@ export function CroftManor({
                   setAktuellerRaum('bibliothek');
                 }}
                 style={{
-                  background: 'linear-gradient(180deg, #2b1a0e 0%, #170d06 100%)',
-                  border: '2px solid #d4af37',
-                  borderRadius: '8px',
+                  background: 'transparent',
+                  border: '0',
+                  borderRadius: '0',
                   cursor: 'pointer',
                   padding: '0',
                   overflow: 'hidden',
                   display: 'flex',
                   flexDirection: 'column',
                   textAlign: 'left',
-                  boxShadow: '0 6px 18px rgba(0,0,0,0.7), inset 0 1px 0 rgba(212,175,55,0.3)',
+                  boxShadow: 'none',
                   transition: 'all 0.2s ease',
                 }}
                 className="group hover:scale-105 active:scale-95 hover:border-amber-300 hover:shadow-[0_8px_24px_rgba(212,175,55,0.4)]"
@@ -5416,7 +5416,7 @@ export function CroftManor({
                     style={{
                       marginTop: '8px',
                       paddingTop: '6px',
-                      borderTop: '1px solid rgba(212,175,55,0.2)',
+                      borderTop: '0',
                       color: '#d4af37',
                       fontSize: '11.5px',
                       fontWeight: 'bold',
@@ -5438,16 +5438,16 @@ export function CroftManor({
                   setAktuellerRaum('schlafgemach');
                 }}
                 style={{
-                  background: 'linear-gradient(180deg, #2b1a0e 0%, #170d06 100%)',
-                  border: '2px solid #d4af37',
-                  borderRadius: '8px',
+                  background: 'transparent',
+                  border: '0',
+                  borderRadius: '0',
                   cursor: 'pointer',
                   padding: '0',
                   overflow: 'hidden',
                   display: 'flex',
                   flexDirection: 'column',
                   textAlign: 'left',
-                  boxShadow: '0 6px 18px rgba(0,0,0,0.7), inset 0 1px 0 rgba(212,175,55,0.3)',
+                  boxShadow: 'none',
                   transition: 'all 0.2s ease',
                 }}
                 className="group hover:scale-105 active:scale-95 hover:border-amber-300 hover:shadow-[0_8px_24px_rgba(212,175,55,0.4)]"
@@ -5500,7 +5500,7 @@ export function CroftManor({
                     style={{
                       marginTop: '8px',
                       paddingTop: '6px',
-                      borderTop: '1px solid rgba(212,175,55,0.2)',
+                      borderTop: '0',
                       color: '#d4af37',
                       fontSize: '11.5px',
                       fontWeight: 'bold',
@@ -5522,16 +5522,16 @@ export function CroftManor({
                   setAktuellerRaum('grosses-wohnzimmer');
                 }}
                 style={{
-                  background: 'linear-gradient(180deg, #2b1a0e 0%, #170d06 100%)',
-                  border: '2px solid #d4af37',
-                  borderRadius: '8px',
+                  background: 'transparent',
+                  border: '0',
+                  borderRadius: '0',
                   cursor: 'pointer',
                   padding: '0',
                   overflow: 'hidden',
                   display: 'flex',
                   flexDirection: 'column',
                   textAlign: 'left',
-                  boxShadow: '0 6px 18px rgba(0,0,0,0.7), inset 0 1px 0 rgba(212,175,55,0.3)',
+                  boxShadow: 'none',
                   transition: 'all 0.2s ease',
                 }}
                 className="group hover:scale-105 active:scale-95 hover:border-amber-300 hover:shadow-[0_8px_24px_rgba(212,175,55,0.4)]"
@@ -5584,7 +5584,7 @@ export function CroftManor({
                     style={{
                       marginTop: '8px',
                       paddingTop: '6px',
-                      borderTop: '1px solid rgba(212,175,55,0.2)',
+                      borderTop: '0',
                       color: '#d4af37',
                       fontSize: '11.5px',
                       fontWeight: 'bold',
@@ -5606,16 +5606,16 @@ export function CroftManor({
                   setAktuellerRaum('kellergewoelbe');
                 }}
                 style={{
-                  background: 'linear-gradient(180deg, #2b1a0e 0%, #170d06 100%)',
-                  border: '2px solid #d4af37',
-                  borderRadius: '8px',
+                  background: 'transparent',
+                  border: '0',
+                  borderRadius: '0',
                   cursor: 'pointer',
                   padding: '0',
                   overflow: 'hidden',
                   display: 'flex',
                   flexDirection: 'column',
                   textAlign: 'left',
-                  boxShadow: '0 6px 18px rgba(0,0,0,0.7), inset 0 1px 0 rgba(212,175,55,0.3)',
+                  boxShadow: 'none',
                   transition: 'all 0.2s ease',
                 }}
                 className="group hover:scale-105 active:scale-95 hover:border-amber-300 hover:shadow-[0_8px_24px_rgba(212,175,55,0.4)]"
@@ -5668,7 +5668,7 @@ export function CroftManor({
                     style={{
                       marginTop: '8px',
                       paddingTop: '6px',
-                      borderTop: '1px solid rgba(212,175,55,0.2)',
+                      borderTop: '0',
                       color: '#d4af37',
                       fontSize: '11.5px',
                       fontWeight: 'bold',
