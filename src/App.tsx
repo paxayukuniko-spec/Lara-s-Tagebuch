@@ -15,7 +15,7 @@ import { stereoAudio } from './services/stereoAudioService';
 import { useStereoAudio } from './hooks/useStereoAudio';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<NavTab>('tagebuch');
+  const [activeTab, setActiveTab] = useState<NavTab>('home');
   const [entries, setEntries] = useState<DiaryEntry[]>(db.getEntries());
   const [activeEntryId, setActiveEntryId] = useState<string>('tr1996-arnak-ruins');
 
