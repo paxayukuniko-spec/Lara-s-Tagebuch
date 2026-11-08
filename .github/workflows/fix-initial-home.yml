@@ -1,0 +1,45 @@
+name: Start app on homepage
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/fix-initial-home.yml
+
+permissions:
+  contents: write
+
+jobs:
+  fix-initial-home:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Set homepage as initial view
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          path = Path('src/App.tsx')
+          text = path.read_text()
+          old = "const [activeTab, setActiveTab] = useState<NavTab>('tagebuch');"
+          new = "const [activeTab, setActiveTab] = useState<NavTab>('home');"
+          if old not in text:
+              raise SystemExit('Expected initial diary state not found')
+          path.write_text(text.replace(old, new, 1))
+          print('Initial view changed from diary to homepage')
+          PY
+      - name: Verify build
+        run: |
+          npm install
+          npm run build
+      - name: Commit source and remove temporary workflow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/App.tsx
+          git rm .github/workflows/fix-initial-home.yml
+          git commit -m "Open homepage on initial load"
+          git push
