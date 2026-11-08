@@ -794,7 +794,7 @@ export function CroftManor({
                   className="group focus:outline-none"
                 >
                   {/* Unsichtbar, zeigt bei Berührung (Hover) einen dezenten antiken Schimmer */}
-                  <div className="w-full h-full rounded transition-all duration-300 group-hover:bg-amber-400/10 group-hover:border group-hover:border-amber-400/30 flex items-center justify-center opacity-0 group-hover:opacity-100 group-focus:opacity-100">
+                  <div className="w-full h-full rounded transition-all duration-300   -amber-400/30 flex items-center justify-center hidden">
                     <div className="bg-[#1a1008]/90 border border-[#d4af37] text-[#ffd992] text-xs px-3.5 py-1.5 rounded-full shadow-xl flex items-center gap-2 backdrop-blur-sm pointer-events-none transform -translate-y-1 group-hover:translate-y-0 transition-transform">
                       <Sparkles className="w-3.5 h-3.5 text-amber-300 animate-spin" style={{ animationDuration: '4s' }} />
                       <span className="font-semibold tracking-wide">Bücherregal untersuchen</span>
@@ -844,7 +844,7 @@ export function CroftManor({
                       backdropFilter: 'blur(3px)',
                       transition: 'all 0.2s ease',
                     }}
-                    className="group-hover:scale-110 group-hover:border-amber-300 group-hover:shadow-[0_0_20px_rgba(212,175,55,0.7)]"
+                    className="group-hover:scale-110 -amber-300 group-hover:shadow-[0_0_20px_rgba(212,175,55,0.7)]"
                   >
                     <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                       <Radio style={{ width: '16px', height: '16px', color: '#ffd992' }} />
@@ -990,7 +990,7 @@ export function CroftManor({
                   className="group focus:outline-none"
                 >
                   {/* Edler interaktiver Rahmen und pulsierender Schimmer bei Berührung */}
-                  <div className="w-full h-full rounded-lg transition-all duration-300 group-hover:bg-amber-400/20 group-hover:border-2 group-hover:border-amber-400/60 flex items-center justify-center relative">
+                  <div className="w-full h-full rounded-lg transition-all duration-300   -amber-400/60 flex items-center justify-center relative">
                     <div className="bg-[#1a1008]/90 border border-[#d4af37] text-[#ffd992] text-xs px-3.5 py-1.5 rounded-full shadow-2xl flex items-center gap-2 backdrop-blur-sm pointer-events-none transform -translate-y-1 group-hover:translate-y-0 transition-transform">
                       <Sparkles className="w-4 h-4 text-amber-300 animate-pulse" />
                       <span className="font-semibold tracking-wide">Die goldene Maske der Ewigkeit</span>
@@ -1029,7 +1029,7 @@ export function CroftManor({
                   className="group focus:outline-none"
                 >
                   {/* Edler interaktiver Rahmen und pulsierender Schimmer bei Berührung */}
-                  <div className="w-full h-full rounded-lg transition-all duration-300 group-hover:bg-amber-400/20 group-hover:border-2 group-hover:border-amber-400/60 flex items-center justify-center relative">
+                  <div className="w-full h-full rounded-lg transition-all duration-300   -amber-400/60 flex items-center justify-center relative">
                     <div className="bg-[#1a1008]/90 border border-[#d4af37] text-[#ffd992] text-xs px-3.5 py-1.5 rounded-full shadow-2xl flex items-center gap-2 backdrop-blur-sm pointer-events-none transform -translate-y-1 group-hover:translate-y-0 transition-transform">
                       <Scroll className="w-4 h-4 text-amber-300 animate-pulse" />
                       <span className="font-semibold tracking-wide">Schriftrolle untersuchen</span>
@@ -1684,7 +1684,7 @@ export function CroftManor({
                   className="group focus:outline-none"
                 >
                   {/* Unsichtbar, zeigt bei Berührung einen dezenten antiken Schimmer */}
-                  <div className="w-full h-full rounded transition-all duration-300 group-hover:bg-amber-400/10 group-hover:border group-hover:border-amber-400/30 flex items-center justify-center opacity-0 group-hover:opacity-100 group-focus:opacity-100">
+                  <div className="w-full h-full rounded transition-all duration-300   -amber-400/30 flex items-center justify-center hidden">
                     <div className="bg-[#1a1008]/90 border border-[#d4af37] text-[#ffd992] text-xs px-3.5 py-1.5 rounded-full shadow-xl flex items-center gap-2 backdrop-blur-sm pointer-events-none transform -translate-y-1 group-hover:translate-y-0 transition-transform">
                       <Sparkles className="w-3.5 h-3.5 text-amber-300 animate-spin" style={{ animationDuration: '4s' }} />
                       <span className="font-semibold tracking-wide">Geheimfach untersuchen</span>
@@ -1718,7 +1718,7 @@ export function CroftManor({
               }}
               className="group focus:outline-none"
             >
-              <div className="w-full h-full rounded transition-all duration-300 group-hover:bg-amber-400/15 group-hover:border group-hover:border-amber-400/40 flex items-center justify-center opacity-0 group-hover:opacity-100 group-focus:opacity-100">
+              <div className="w-full h-full rounded transition-all duration-300   -amber-400/40 flex items-center justify-center hidden">
                 <div className="bg-[#1a1008]/95 border border-[#d4af37] text-[#ffd992] text-xs px-3.5 py-1.5 rounded-full shadow-xl flex items-center gap-2 backdrop-blur-sm pointer-events-none transform -translate-y-1 group-hover:translate-y-0 transition-transform z-30">
                   <BookOpen className="w-3.5 h-3.5 text-amber-300 animate-pulse" />
                   <span className="font-semibold tracking-wide">Geheimes Tagebuch im Koffer öffnen</span>
@@ -1760,7 +1760,7 @@ export function CroftManor({
                   }}
                   className="group focus:outline-none"
                 >
-                  <div className="w-full h-full rounded-full transition-all duration-300 group-hover:bg-amber-400/25 group-hover:border-2 group-hover:border-amber-400/70 flex items-center justify-center relative">
+                  <div className="w-full h-full rounded-full transition-all duration-300   -amber-400/70 flex items-center justify-center relative">
                     <div className="bg-[#1a1008]/90 border border-[#d4af37] text-[#ffd992] text-xs px-3 py-1 rounded-full shadow-2xl flex items-center gap-1.5 backdrop-blur-sm pointer-events-none transform -translate-y-2 opacity-0 group-hover:opacity-100 transition-all whitespace-nowrap z-30">
                       <Compass className="w-3.5 h-3.5 text-amber-300 animate-pulse" />
                       <span className="font-semibold">Lord Crofts Chronometer</span>
@@ -1797,7 +1797,7 @@ export function CroftManor({
                   }}
                   className="group focus:outline-none"
                 >
-                  <div className="w-full h-full rounded-lg transition-all duration-300 group-hover:bg-amber-400/25 group-hover:border-2 group-hover:border-amber-400/70 flex items-center justify-center relative">
+                  <div className="w-full h-full rounded-lg transition-all duration-300   -amber-400/70 flex items-center justify-center relative">
                     <div className="bg-[#1a1008]/90 border border-[#d4af37] text-[#ffd992] text-xs px-3 py-1 rounded-full shadow-2xl flex items-center gap-1.5 backdrop-blur-sm pointer-events-none transform -translate-y-2 opacity-0 group-hover:opacity-100 transition-all whitespace-nowrap z-30">
                       <Scroll className="w-3.5 h-3.5 text-amber-300 animate-pulse" />
                       <span className="font-semibold">Ein ungeöffneter Brief aus Kairo</span>
@@ -1834,7 +1834,7 @@ export function CroftManor({
                   }}
                   className="group focus:outline-none"
                 >
-                  <div className="w-full h-full rounded-lg transition-all duration-300 group-hover:bg-amber-400/25 group-hover:border-2 group-hover:border-amber-400/70 flex items-center justify-center relative">
+                  <div className="w-full h-full rounded-lg transition-all duration-300   -amber-400/70 flex items-center justify-center relative">
                     <div className="bg-[#1a1008]/90 border border-[#d4af37] text-[#ffd992] text-xs px-3 py-1 rounded-full shadow-2xl flex items-center gap-1.5 backdrop-blur-sm pointer-events-none transform -translate-y-2 opacity-0 group-hover:opacity-100 transition-all whitespace-nowrap z-30">
                       <BookOpen className="w-3.5 h-3.5 text-amber-300 animate-pulse" />
                       <span className="font-semibold">Forschungsnotizen: Das Grab des Seth</span>
@@ -2840,7 +2840,7 @@ export function CroftManor({
                   }}
                   className="group focus:outline-none"
                 >
-                  <div className="w-full h-full rounded transition-all duration-300 group-hover:bg-amber-400/10 group-hover:border group-hover:border-amber-400/30 flex items-center justify-center opacity-0 group-hover:opacity-100 group-focus:opacity-100">
+                  <div className="w-full h-full rounded transition-all duration-300   -amber-400/30 flex items-center justify-center hidden">
                     <div className="bg-[#1a1008]/90 border border-[#d4af37] text-[#ffd992] text-xs px-3.5 py-1.5 rounded-full shadow-xl flex items-center gap-2 backdrop-blur-sm pointer-events-none transform -translate-y-1 group-hover:translate-y-0 transition-transform">
                       <Sparkles className="w-3.5 h-3.5 text-amber-300 animate-spin" style={{ animationDuration: '4s' }} />
                       <span className="font-semibold tracking-wide">Große Holzvitrine untersuchen</span>
@@ -2875,7 +2875,7 @@ export function CroftManor({
                   }}
                   className="group focus:outline-none"
                 >
-                  <div className="w-full h-full rounded transition-all duration-300 group-hover:bg-amber-400/10 group-hover:border group-hover:border-amber-400/30 flex items-center justify-center opacity-0 group-hover:opacity-100 group-focus:opacity-100">
+                  <div className="w-full h-full rounded transition-all duration-300   -amber-400/30 flex items-center justify-center hidden">
                     <div className="bg-[#1a1008]/90 border border-[#d4af37] text-[#ffd992] text-xs px-3.5 py-1.5 rounded-full shadow-xl flex items-center gap-2 backdrop-blur-sm pointer-events-none transform -translate-y-1 group-hover:translate-y-0 transition-transform">
                       <Sparkles className="w-3.5 h-3.5 text-amber-300 animate-spin" style={{ animationDuration: '4s' }} />
                       <span className="font-semibold tracking-wide">Geheimgang untersuchen</span>
@@ -2915,7 +2915,7 @@ export function CroftManor({
                   }}
                   className="group focus:outline-none"
                 >
-                  <div className="w-full h-full rounded transition-all duration-300 group-hover:bg-amber-400/10 group-hover:border group-hover:border-amber-400/30 flex items-center justify-center opacity-0 group-hover:opacity-100 group-focus:opacity-100">
+                  <div className="w-full h-full rounded transition-all duration-300   -amber-400/30 flex items-center justify-center hidden">
                     <div className="bg-[#1a1008]/90 border border-[#d4af37] text-[#ffd992] text-xs px-3.5 py-1.5 rounded-full shadow-xl flex items-center gap-2 backdrop-blur-sm pointer-events-none transform -translate-y-1 group-hover:translate-y-0 transition-transform">
                       <Package className="w-3.5 h-3.5 text-amber-300 animate-pulse" />
                       <span className="font-semibold tracking-wide">Offenen Koffer untersuchen</span>
@@ -3214,7 +3214,7 @@ export function CroftManor({
                   }}
                   className="group focus:outline-none"
                 >
-                  <div className="w-full h-full rounded-xl transition-all duration-300 group-hover:bg-amber-400/15 group-hover:border-2 group-hover:border-amber-400/50 flex items-center justify-center relative">
+                  <div className="w-full h-full rounded-xl transition-all duration-300   -amber-400/50 flex items-center justify-center relative">
                     <div className="bg-[#1a1008]/95 border border-[#d4af37] text-[#ffd992] text-xs sm:text-sm px-4 py-2 rounded-full shadow-2xl flex items-center gap-2 backdrop-blur-md pointer-events-none transform -translate-y-2 opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all">
                       <ArrowLeft className="w-4 h-4 text-amber-300 animate-pulse" />
                       <span className="font-bold tracking-wide">Steintreppe zur Eingangshalle hinaufsteigen</span>
@@ -3457,8 +3457,8 @@ export function CroftManor({
                       }}
                       className="group focus:outline-none"
                     >
-                      <div className="w-full h-full rounded transition-all duration-300 group-hover:bg-amber-400/20 group-hover:border-2 group-hover:border-amber-400/60 flex items-center justify-center relative">
-                        <div className="bg-[#1a1008]/92 border border-[#d4af37] text-[#ffd992] text-xs px-3 py-1.5 rounded-full shadow-2xl flex items-center gap-1.5 backdrop-blur-sm pointer-events-none opacity-0 group-hover:opacity-100 group-focus:opacity-100 transform -translate-y-1 group-hover:translate-y-0 transition-all whitespace-nowrap z-30">
+                      <div className="w-full h-full rounded transition-all duration-300   -amber-400/60 flex items-center justify-center relative">
+                        <div className="bg-[#1a1008]/92 border border-[#d4af37] text-[#ffd992] text-xs px-3 py-1.5 rounded-full shadow-2xl flex items-center gap-1.5 backdrop-blur-sm pointer-events-none hidden transform -translate-y-1 group-hover:translate-y-0 transition-all whitespace-nowrap z-30">
                           <span className="text-sm">🏺</span>
                           <span className="font-semibold tracking-wide">Griechische Amphoren</span>
                         </div>
@@ -3496,8 +3496,8 @@ export function CroftManor({
                       }}
                       className="group focus:outline-none"
                     >
-                      <div className="w-full h-full rounded transition-all duration-300 group-hover:bg-amber-400/20 group-hover:border-2 group-hover:border-amber-400/60 flex items-center justify-center relative">
-                        <div className="bg-[#1a1008]/92 border border-[#d4af37] text-[#ffd992] text-xs px-3 py-1.5 rounded-full shadow-2xl flex items-center gap-1.5 backdrop-blur-sm pointer-events-none opacity-0 group-hover:opacity-100 group-focus:opacity-100 transform -translate-y-1 group-hover:translate-y-0 transition-all whitespace-nowrap z-30">
+                      <div className="w-full h-full rounded transition-all duration-300   -amber-400/60 flex items-center justify-center relative">
+                        <div className="bg-[#1a1008]/92 border border-[#d4af37] text-[#ffd992] text-xs px-3 py-1.5 rounded-full shadow-2xl flex items-center gap-1.5 backdrop-blur-sm pointer-events-none hidden transform -translate-y-1 group-hover:translate-y-0 transition-all whitespace-nowrap z-30">
                           <span className="text-sm">🪙</span>
                           <span className="font-semibold tracking-wide">Denare des Marcus Aurelius</span>
                         </div>
@@ -3535,8 +3535,8 @@ export function CroftManor({
                       }}
                       className="group focus:outline-none"
                     >
-                      <div className="w-full h-full rounded transition-all duration-300 group-hover:bg-amber-400/20 group-hover:border-2 group-hover:border-amber-400/60 flex items-center justify-center relative">
-                        <div className="bg-[#1a1008]/92 border border-[#d4af37] text-[#ffd992] text-xs px-3 py-1.5 rounded-full shadow-2xl flex items-center gap-1.5 backdrop-blur-sm pointer-events-none opacity-0 group-hover:opacity-100 group-focus:opacity-100 transform -translate-y-1 group-hover:translate-y-0 transition-all whitespace-nowrap z-30">
+                      <div className="w-full h-full rounded transition-all duration-300   -amber-400/60 flex items-center justify-center relative">
+                        <div className="bg-[#1a1008]/92 border border-[#d4af37] text-[#ffd992] text-xs px-3 py-1.5 rounded-full shadow-2xl flex items-center gap-1.5 backdrop-blur-sm pointer-events-none hidden transform -translate-y-1 group-hover:translate-y-0 transition-all whitespace-nowrap z-30">
                           <span className="text-sm">🗿</span>
                           <span className="font-semibold tracking-wide">Büste der Athena</span>
                         </div>
@@ -4158,7 +4158,7 @@ export function CroftManor({
               }}
               className="group focus:outline-none"
             >
-              <div className="w-full h-full rounded-lg transition-all duration-300 group-hover:bg-amber-400/15 group-hover:border-2 group-hover:border-amber-400/50 flex items-center justify-center opacity-0 group-hover:opacity-100 group-focus:opacity-100 relative">
+              <div className="w-full h-full rounded-lg transition-all duration-300   -amber-400/50 flex items-center justify-center hidden relative">
                 <div className="bg-[#1a1008]/92 border border-[#d4af37] text-[#ffd992] text-xs px-3.5 py-1.5 rounded-full shadow-2xl flex items-center gap-2 backdrop-blur-sm pointer-events-none transform -translate-y-1 group-hover:translate-y-0 transition-transform">
                   <Crosshair className="w-3.5 h-3.5 text-amber-300 animate-pulse" />
                   <span className="font-semibold tracking-wide">Ikonische Doppelpistolen</span>
@@ -4197,7 +4197,7 @@ export function CroftManor({
               }}
               className="group focus:outline-none"
             >
-              <div className="w-full h-full rounded-lg transition-all duration-300 group-hover:bg-amber-400/15 group-hover:border-2 group-hover:border-amber-400/50 flex items-center justify-center opacity-0 group-hover:opacity-100 group-focus:opacity-100 relative">
+              <div className="w-full h-full rounded-lg transition-all duration-300   -amber-400/50 flex items-center justify-center hidden relative">
                 <div className="bg-[#1a1008]/92 border border-[#d4af37] text-[#ffd992] text-xs px-3.5 py-1.5 rounded-full shadow-2xl flex items-center gap-2 backdrop-blur-sm pointer-events-none transform -translate-y-1 group-hover:translate-y-0 transition-transform">
                   <BookOpen className="w-3.5 h-3.5 text-amber-300 animate-pulse" />
                   <span className="font-semibold tracking-wide">Laras privates Tagebuch</span>
@@ -4260,7 +4260,7 @@ export function CroftManor({
               }}
               className="group focus:outline-none"
             >
-              <div className="w-full h-full rounded-lg transition-all duration-300 group-hover:bg-amber-400/15 group-hover:border-2 group-hover:border-amber-400/50 flex items-center justify-center opacity-0 group-hover:opacity-100 group-focus:opacity-100 relative">
+              <div className="w-full h-full rounded-lg transition-all duration-300   -amber-400/50 flex items-center justify-center hidden relative">
                 <div className="bg-[#1a1008]/92 border border-[#d4af37] text-[#ffd992] text-xs px-3.5 py-1.5 rounded-full shadow-2xl flex items-center gap-2 backdrop-blur-sm pointer-events-none transform -translate-y-1 group-hover:translate-y-0 transition-transform">
                   <Compass className="w-3.5 h-3.5 text-amber-300 animate-spin" style={{ animationDuration: '6s' }} />
                   <span className="font-semibold tracking-wide">Kommende Expedition: Legacy of Atlantis</span>
@@ -6042,7 +6042,7 @@ export function CroftManor({
               }}
               className="group focus:outline-none"
             >
-              <div className="w-full h-full rounded transition-all duration-300 group-hover:bg-amber-400/15 group-hover:border-2 group-hover:border-amber-400/50 flex items-center justify-center opacity-0 group-hover:opacity-100 group-focus:opacity-100">
+              <div className="w-full h-full rounded transition-all duration-300   -amber-400/50 flex items-center justify-center hidden">
                 <div className="bg-[#1a1008]/90 border border-[#d4af37] text-[#ffd992] text-xs px-3.5 py-1.5 rounded-full shadow-xl flex items-center gap-2 backdrop-blur-sm pointer-events-none">
                   <span className="text-base">🔥</span>
                   <span className="font-semibold tracking-wide">Kaminfeuer knistern lassen</span>
@@ -6076,7 +6076,7 @@ export function CroftManor({
               }}
               className="group focus:outline-none"
             >
-              <div className="w-full h-full rounded transition-all duration-300 group-hover:bg-cyan-400/15 group-hover:border-2 group-hover:border-cyan-400/50 flex items-center justify-center opacity-0 group-hover:opacity-100 group-focus:opacity-100">
+              <div className="w-full h-full rounded transition-all duration-300   -cyan-400/50 flex items-center justify-center hidden">
                 <div className="bg-[#1a1008]/95 border border-[#d4af37] text-[#ffd992] text-xs px-3.5 py-1.5 rounded-full shadow-xl flex items-center gap-2 backdrop-blur-sm pointer-events-none">
                   <span className="text-base">🧊</span>
                   <span className="font-semibold tracking-wide">Weinregal & Winston untersuchen</span>
@@ -6110,7 +6110,7 @@ export function CroftManor({
               }}
               className="group focus:outline-none"
             >
-              <div className="w-full h-full rounded transition-all duration-300 group-hover:bg-amber-400/15 group-hover:border-2 group-hover:border-amber-400/50 flex items-center justify-center opacity-0 group-hover:opacity-100 group-focus:opacity-100">
+              <div className="w-full h-full rounded transition-all duration-300   -amber-400/50 flex items-center justify-center hidden">
                 <div className="bg-[#1a1008]/95 border border-[#d4af37] text-[#ffd992] text-xs px-3.5 py-1.5 rounded-full shadow-xl flex items-center gap-2 backdrop-blur-sm pointer-events-none">
                   <BookOpen className="w-4 h-4 text-amber-300 animate-pulse" />
                   <span className="font-semibold tracking-wide">Atlantis-Tagebuch lesen</span>
