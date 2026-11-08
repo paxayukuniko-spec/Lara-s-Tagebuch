@@ -1,0 +1,40 @@
+name: Remove remaining hotspot frames and labels
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/fix-hotspot-visuals-v2.yml
+
+permissions:
+  contents: write
+
+jobs:
+  fix-hotspots:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Remove hotspot visuals
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          path = Path('src/components/CroftManor.tsx')
+          text = path.read_text()
+          original = text
+          text = re.sub(r'group-hover:bg-(?:amber|cyan)-400/\d+', '', text)
+          text = re.sub(r'group-hover:border(?:-2)?', '', text)
+          text = re.sub(r'group-hover:border-(?:amber|cyan)-400/\d+', '', text)
+          text = text.replace('opacity-0 group-hover:opacity-100 group-focus:opacity-100', 'hidden')
+          path.write_text(text)
+          print('changed:', text != original)
+          PY
+      - name: Commit corrected source and remove temporary workflow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/components/CroftManor.tsx
+          git rm .github/workflows/fix-hotspot-visuals-v2.yml
+          git commit -m "Remove remaining hotspot frames and labels" || exit 0
+          git push
