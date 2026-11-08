@@ -1,0 +1,59 @@
+name: Prepare cleaner clickable room cards
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/clean-room-cards.yml
+
+permissions:
+  contents: write
+
+jobs:
+  clean-room-cards:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Remove room card boxes while keeping buttons
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          path = Path('src/components/CroftManor.tsx')
+          text = path.read_text()
+          start_marker = '            DIE VIER RAUM-BUTTONS:'
+          end_marker = "      {/* --- RENDERING FÜR DAS GROSSE WOHNZIMMER --- */}"
+          start = text.find(start_marker)
+          end = text.find(end_marker)
+          if start < 0 or end < 0 or start >= end:
+              raise SystemExit('Room card section not found')
+          section = text[start:end]
+          replacements = {
+              "background: 'linear-gradient(180deg, #2b1a0e 0%, #170d06 100%)'": "background: 'transparent'",
+              "border: '2px solid #d4af37'": "border: '0'",
+              "borderRadius: '8px'": "borderRadius: '0'",
+              "boxShadow: '0 6px 18px rgba(0,0,0,0.7), inset 0 1px 0 rgba(212,175,55,0.3)'": "boxShadow: 'none'",
+              "borderTop: '1px solid rgba(212,175,55,0.2)'": "borderTop: '0'",
+          }
+          for old, new in replacements.items():
+              section = section.replace(old, new)
+          marker = """            Butler Winston empfängt dich in der großen Halle. Wähle einen Raum oder Flügel des Anwesens:
+          </p>"""
+          if marker in text and 'Die Bilder unten sind anklickbar' not in text:
+              text = text.replace(marker, marker + "\n          <p style={{ color: '#d4af37', fontSize: '12px', marginTop: '-10px', marginBottom: '16px', opacity: 0.9 }}>\n            Die Bilder unten sind anklickbar. Bewege den Mauszeiger darüber oder tippe auf einen Raum, um ihn zu betreten.\n          </p>", 1)
+          text = text[:start] + section + text[end:]
+          path.write_text(text)
+          print('Room card cleanup applied')
+          PY
+      - name: Verify build
+        run: |
+          npm install
+          npm run build
+      - name: Commit source and remove temporary workflow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/components/CroftManor.tsx
+          git rm .github/workflows/clean-room-cards.yml
+          git commit -m "Simplify clickable room cards" || exit 0
+          git push
